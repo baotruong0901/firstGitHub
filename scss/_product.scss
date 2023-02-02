@@ -1,0 +1,113 @@
+.product{
+    margin: 20px 0px;
+    &-header{
+        color: white;
+        margin: 20px 0;
+        .product-popular,.product-sale,.product-new{
+            margin: 20px 15px;
+            color: #000;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+    &-list{
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        .list-item{
+            width: 18%;
+            .image{
+                width: 100%;
+                height: 250px;
+                border-bottom:1px solid rgba($color: #000000, $alpha: 0.2);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.list-item{
+    border:1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    animation: slide-down 1s ease-in-out;
+    input{
+        display: none;
+    }
+    &:hover{
+        .add-heart{
+            display: block;
+        }
+    }
+    .add-heart{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: var(--btn-color);
+        cursor: pointer;
+        display: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid var(--btn-color);
+        transition: 0.25s ease-in-out;
+        i{
+            margin: 6px
+        }
+        &:hover{
+            background-color: #f5214a;
+            i{
+                color: white;
+            }
+        }
+    }
+    .sale{
+        position: absolute;
+        display:none;
+        width: 38px;
+        height: 38px;
+        padding: 10px 0;
+        font-size: 14px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: var(--btn-color);
+        left: -8px;
+        top: 10%;
+    }
+    .content{
+        height: 140px;
+        .name{
+            display: block;
+            color: var(--bg-color-header);
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .price{
+            display: block;
+            color: var(--btn-color);
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .addtocart{
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+        }
+    }
+}
+@keyframes slide-down{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,56 @@
+.trend{
+    margin-top: 60px;
+    &-list{
+        // width: 1000px;
+        .item{
+            width: 48.8%;
+            height: 295px;
+            position: relative;
+            overflow: hidden;
+            // border: 5px solid #000;
+            .content{
+                z-index: 10;
+                padding: 10px;
+                color: white;
+                .text{
+                    margin-bottom: 30px;
+                    font-weight: 400;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 30px;
+                    width: 240px;
+                    transform: translateY(-100%);
+                    &::before{
+                        content: "";
+                        width: 30%;
+                        height: 2px;
+                        background-color: var(--btn-color);
+                        position: absolute;
+                        bottom: -20px;
+                    }
+                }
+                .category{
+                    font-size: 35px;
+                    position: absolute;
+                    left: 30px;
+                    bottom: 40%;
+                    transform: translateY(50%);
+                }
+            }
+            .image{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 1;
+                cursor: pointer;
+                scale: 1;
+                transition: 0.4s ease-in-out;
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+}
+

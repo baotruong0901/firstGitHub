@@ -1,0 +1,15 @@
+.slide-banner{
+    padding: 50px 0 0px 0;
+    // background-color: #222222;
+    position: relative;
+    &-item{
+        width: 100%;
+        height: 500px;
+        // position: relative;
+        .image{
+            width: 100%;
+            // position: absolute;
+        }
+    }
+    
+}

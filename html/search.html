@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/scss/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>kết quả tìm kiếm</title>
+</head>
+<body onload="renderProductMiniCart(),render(),searchResutl(),addToCart()">
+    <header>
+        <section class="header-top">
+                    <div class="container">
+                        <div class="top">
+                            <div class="header-top-left">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM</span>
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="tel"><a href="#">0943147155</a></span>
+                            </div>
+                            <div class="header-top-right">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter "></i>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section class="header-mid">
+            <div class="container">
+                <div class="mid">
+                    <div class="icon-menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html"><img src="/image/logo-mona-2.png" alt=""></a>
+                    </div>
+                    <div class="search">
+                        <input oninput="showSearch()" type="text" id="search" placeholder="Tìm kiếm...">
+                        <button class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            
+                        </button>
+
+                        <div id="search-box" class="search-box hide">
+                        
+                        </div>
+                    </div>
+                    <ul class="card">
+                        <li class="signup"><a href="#">Đăng nhập</a>
+                        </li>
+                        <li class="heart">
+                            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                            <div class="count"><span id="wishlist-items">0</span></div>
+                        </li>
+                        <li class="cart">
+                            <a href="/html/cart.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                            <div id="box-cart" class="box-cart">
+                                <div id="list" class="list">
+
+                                </div>
+                                <div id="contact" class="contact">
+                                    
+                                </div>
+                            </div>
+                            <div class="count"><span id="cart-items">0</span></div> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="header-bottom">
+            <div class="container">
+                <div class="bottom">
+                    <ul class="menu c-flex">
+                        <li class="item"><a class="active" href="/html/index.html">TRANG CHỦ</a></li>
+                        <li class="item"><a href="#">GIỚI THIỆU</a></li>
+                        <li class="item"><a href="#">ĐỒNG HỒ NAM</a></li>
+                        <li class="item"><a href="#">ĐỒNG HỒ NỮ</a></li>
+                        <li class="item"><a href="#">BLOGS</a></li>
+                        <li class="item"><a href="#">GIỚI THIỆU</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="item-search">
+        <div class="container">
+            <div class="search-header">
+                <span>
+                    <a href="/html/index.html">trang chủ</a>
+                </span>
+                <span>/</span>
+                <span id="searchResult"> kết quả tìm kiếm cho ""</span>
+                
+            </div>
+            <div class="product-list d-flex" id="listSearch">
+                
+            </div>    
+        </div>
+    </section>
+   
+    <footer>
+        <section class="register">
+            <div class="container">
+                <div class="d-flex register-item">
+                    <h2 class="text">
+                        đăng ký nhận thông tin
+                    </h2>
+                    <div class="register-form">
+                        <input type="text" placeholder="Email...">
+                        <button>đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="sec-footer d-flex">
+            <div class="container">
+                <div class="contact s-flex">
+                    <div class="info contact-item">
+                        <h2 class="header">
+                            thông tin liên hệ
+                        </h2>
+                        <ul class="text">
+                            <li class="text-item">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</li>
+                            <li class="text-item">076 922 0162</li>
+                            <li class="text-item">demonhunterg@gmail.com
+                                mon@mona.media</li>
+                            <li class="text-item">demonhunterp</li>
+                            <li class="text-item">
+                                <div class="social-network flex">
+                                    <div class="bg bg-fb">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </div>
+                                    <div class="bg bg-ig">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    </div>
+                                    <div class="bg bg-tw">
+                                    <i class="fa-brands fa-twitter"></i>
+                                    </div>
+                                    <div class="bg bg-linkedin">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="link contact-item">
+                        <h2 class="header">
+                            liên kết
+                        </h2>
+                        <ul class="text">
+                            <li class="text-item"><a href="">Giới thiệu</a></li>
+                            <li class="text-item"><a href="">Đồng hồ nam</a></li>
+                            <li class="text-item"><a href="">Đồng hồ nữ</a></li>
+                            <li class="text-item"><a href=""> Blogs</a></li>
+                            <li class="text-item"><a href="">liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="support contact-item">
+                        <h2 class="header">
+                            hổ trợ
+                        </h2>
+                        <ul class="text">
+                            <li class="text-item"><a href="">Hướng dẫn mua hàng</a></li>
+                            <li class="text-item"><a href="">Hướng dẫn thanh toán</a></li>
+                            <li class="text-item"><a href="">Chính sách bảo hành</a></li>
+                            <li class="text-item"><a href=""> Chính sách đổi trả</a></li>
+                            <li class="text-item"><a href="">Tư vấn khách hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="download contact-item">
+                        <h2 class="header">
+                            tải ứng dụng trên
+                        </h2>
+                        <ul class="text">
+                            <li class="text-item">Ứng dụng Mona Watch hiện có sẵn trên Google Play &amp; App Store. Tải nó ngay.</li>
+                            <li class="text-item">
+                                <img src="/image/img-googleplay.jpg" alt="">
+                            </li>
+                            <li class="text-item">
+                                <img src="/image/img-appstore.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top">
+        <div class="back-to-top-btn">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+    </div>
+    <div id="toasts">
+        <div id="message" class="message">
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/listProduct.js"></script>
+    <script src="/javascript/addtocard.js"></script>
+    <script src="/javascript/search.js"></script>
+    <script src="/javascript/message.js"></script>
+    <script src="/javascript/owlcarousel.js"></script>
+
+</body>
+</html>

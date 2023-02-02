@@ -1,0 +1,415 @@
+header{
+    background-color: var(--bg-color-header);
+    .header-top{
+        color: white;
+        border-bottom: 1px solid var(--border-color);   
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        &-left{
+            i, span{
+            padding-right: 10px;
+            }
+            span{
+                font-size: 13px;
+            }
+            .tel{
+                cursor: pointer;
+                a{
+                   transition: 0.25s ease-in-out;
+                }
+            }
+            .tel:hover{
+                a{
+                    color: var(--btn-color)
+                }
+            }
+       }
+        &-right{
+            position: relative;
+            i{
+            padding-right: 10px;
+            transition: 0.25s ease-in-out;
+            cursor: pointer;
+            font-size: 14px;
+            }
+            i:hover{
+                color: var(--btn-color)
+            }
+        }
+
+    }
+    .header-mid{
+        border-bottom: 1px solid var(--border-color);   
+        .mid{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        
+        }
+        .icon-menu{
+            display: none;
+        }
+        .logo{
+            width: 200px;
+            height: 70px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .search{
+            width: 400px;
+            height: 45px;
+            position: relative;
+            .search-box{
+                position: absolute;
+                width: 420px;
+                top: 45px;
+                right: -20px;
+                background-color: rgba(#fff , 0.9);
+                border-radius: 5px;
+                z-index: 1000;
+                max-height: 450px;
+                overflow: scroll;
+                // display: none;
+                p{
+                    padding: 30px 0;
+                    text-align: center;
+                    font-size: 14px;
+                    color: rgba(#000 , 0.6);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                .item{
+                    cursor: pointer;
+                    padding: 5px 0;
+                    border-bottom: 1px solid rgba(#000 , 0.2);
+                    &:hover{
+                        background: rgba(#000, 0.1);
+                    }
+                }
+                .image{
+                    margin-left: 10px;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                }
+                .name{
+                    margin-right: 170px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                .price{
+                    margin-right: 40px;
+                    font-weight: bold;
+                }
+            }
+
+            #search{
+                width: 85%;
+                height: 100%;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                padding: 10px;
+                color: var(--border-color);
+            }
+            #search:focus{
+                box-shadow: 0px 0px 6px 2px rgba(#fff , 0.5);
+
+            }
+            &-btn{
+                background-color: var(--btn-color);
+                color: white;
+                font-size: 16px;
+                position: absolute;
+                width: 20%;
+                height: calc(100%);
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                cursor: pointer;
+                div{
+                    background-color: rgba(#000, 0.3);
+                    width: 100%;
+                    height: 100%;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    transition: 0.25s ease-in-out;
+                }
+            }
+            &-btn:hover{
+                div{
+                    opacity: 1;
+
+                }
+            }
+        }
+        .card{
+            margin-top: 25px;
+            display: flex; 
+            justify-content: space-between;
+            li.signup,li.heart,li.cart{
+                margin-left: 30px;
+                position: relative;
+                cursor: pointer;
+                a,i{
+                    color: white;
+                }
+                i{
+                    font-size: 20px;
+
+                }
+                .count{
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: red;
+                    opacity: 1;
+                    bottom:100%;
+                    left: 50%;
+                    transform: translate(30%,50%);
+                    z-index: 5;
+                    color: white;
+                    span{
+                        position: absolute;
+                        font-size: 10px;
+                        top: 50%;
+                        right: 50%;
+                        transform: translate(50%,-50%);
+                    }
+                }
+                
+            }
+            .signup{
+                a{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+            .cart{
+                position: relative;
+                padding-bottom: 25px;
+                &:hover{
+                    .box-cart{
+                        animation: slide .6s ease-in-out;
+                        display: block;
+                    }
+                }
+                .box-cart{
+                    position: absolute;
+                    width: 300px;
+                    min-height: auto;
+                    background-color: white;
+                    top: 40px;
+                    right: 0;
+                    border-radius: 5px;
+                    z-index: 1000;
+                    box-shadow: 0px 2px 4px rgba(#000, 0.1);
+                    display: none;
+                    .no-item{
+                        height: auto;
+                        width: 70%;
+                        margin: 0 auto;
+                        position: relative;
+                        p{
+                            width: 200px;
+                            position: absolute;
+                            font-size: 20px;
+                            font-weight: bold;
+                            text-align: center;
+                            color: rgba(#000 , 0.6);
+                            top: 50%;
+                            transition: 0.25s ease-in-out;
+                        }
+                        
+                    }
+                    .list{
+                        overflow: scroll;
+                        max-height: 400px;
+                    }
+
+                    .contact{
+                        min-height: 210px;
+                        .sum{
+                            position: absolute;
+                            left: 0;
+                            bottom: 130px;
+                            width: calc(100% - 40px);
+                            margin: 0 20px 20px 20px;
+                            border-bottom: 2px solid rgba(#000, 0.1);
+                            strong{
+                                width: 100%;
+                                display: block;
+                                color: var(--btn-color);
+                                font-size: 22px;
+                                font-weight: bold;
+    
+                                text-align: center;
+                                padding: 20px 0;
+                            }
+                            span{
+                                font-size: 20px;
+                                font-weight: bold;
+                                color: rgba(#000 , 0.5);
+                            }
+                        }
+                        button{
+                            position: absolute;
+                            left: 0;
+                            width: calc(100% - 40px);
+                            margin: 0 20px;
+                            padding: 15px;
+                            margin-bottom: 10px;
+                            background-color: var(--btn-color);
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                        .btn-pay{
+                            bottom: 15px;
+                        }
+                        .btn-cart{
+                            bottom: 75px;
+                        }
+                    }
+
+                    .item{
+                        margin: 20px 20px 0px 20px;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid rgba(#000, 0.1);
+                        .image{
+                            img{
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+                        .content{
+                            // color: rgba(#000 , 0.8);
+                            margin-right: 60px;
+                            .name{
+                                color: rgba(#000 , 0.5);
+                                margin-bottom: 10px;
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+                            .price{
+                                color: rgba(#000 , 0.3);
+                                font-size: 13px;
+                            }
+                        }
+                
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+    .header-bottom{
+        color: white;
+        .bottom{
+            .menu{
+                padding:20px 0;
+                li.item{
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin: 0px 20px;
+                    position: relative;
+                        a{
+                            transition: 0.25s ease-in-out;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 2px;
+                                background-color: var(--btn-color);
+                                bottom: -5px;
+                                opacity: 0;
+                                transition: 0.25s ease-in-out;
+                            }
+                        }
+                    &:hover{
+                        a::before{
+                            opacity: 1;
+                        }
+                        a{
+                            color: var(--btn-color);
+                        }
+                    }                      
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header-top{
+        display: none;
+    }
+    .header-mid{
+        background-color: var(--bg-color-header);
+        .icon-menu{
+            width: 15%;
+            display: block;
+            i{
+                color: white;
+                font-size: 30px;
+            }
+        }
+        .search, .heart, .signup{
+            display: none;
+        }
+
+    }
+    .header-bottom{
+        .bottom{
+            .menu{
+                flex-direction: column;
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        top: 0px;
+    }
+    100%{
+        opacity: 1;
+        top: 40px;
+    }
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(#333333,0.8);
+    z-index: 100000;
+    animation: scroll-top 1s ease forwards;
+}
+
+@keyframes scroll-top {
+    0%{
+        top: -50px;
+    }
+    100%{
+        top: 0;
+    }
+}

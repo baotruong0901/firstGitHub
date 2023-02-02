@@ -1,0 +1,13 @@
+.addtocart{   
+    width: 60%;   
+    position: absolute;
+    padding: 10px;
+    background-color: var(--btn-color);
+    cursor: pointer;
+    span{
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}

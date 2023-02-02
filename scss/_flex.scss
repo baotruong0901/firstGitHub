@@ -1,0 +1,26 @@
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex{
+    display: flex;
+}
+
+.s-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.a-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

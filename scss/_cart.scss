@@ -1,0 +1,93 @@
+.cart-item{
+    margin-right: 20px;
+    .product-remove{
+        width: 7%;
+    }
+    .product-image{
+        width: 13%;
+    }
+    .product-name{
+        width: 25%;
+    }
+    .product-price{
+        width: 20%;
+    }
+    .product-status{
+        width: 25%;
+        // height: 40px;
+        
+    }
+    .product-total{
+        width: 10%;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 15px;
+        color: rgba(#000, 0.8);
+        font-weight: bold;
+    }
+    width: 58%;
+    .btn{
+        width: 20px;
+        height: 40px;
+        background-color: rgba(#000, 0.05);
+        font-size: 18px;
+        color: rgba(#000, 0.6);
+        cursor: pointer;
+    }
+    .amount{
+        text-align: center;
+        height: 40px;
+    }
+    input{
+        border: 1px solid rgba(#000, 0.2);
+    }
+    tfoot{
+        height: 100px;
+        td{
+            margin-top: 20px;
+            border-bottom:none !important ;
+        }
+            
+        .button-update{
+            padding: 12px 20px;
+            background-color: var(--btn-color);
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+.button-back-home{
+    margin-right: 15px;
+    margin-bottom: 50px;
+    padding: 10px 40px;
+    background-color: white;
+    border: 2px solid var(--btn-color); 
+    transition:all 0.25s ease-in-out;
+    cursor: pointer;
+    span{
+        color: var(--btn-color);
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &:hover{
+        background-color: var(--btn-color);
+        span{
+            color: white;
+        }
+    }
+}
+.no-product{
+    width: 100%;
+    // height: 140px;
+    text-align: center;
+    p{  
+        margin: 60px 0 20px 0 ;
+        font-weight: bold;
+        font-size: 24px;
+        color: rgba(#000, 0.4);
+    }
+}
